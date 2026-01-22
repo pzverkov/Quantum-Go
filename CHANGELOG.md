@@ -7,6 +7,37 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased][]
 
+## [0.0.8][] - 2026-01-22
+
+### Added
+- **Regulatory Documentation** (`docs/ROADMAP.md`)
+  - EU Dual-Use Regulation open source exemption status documented
+  - Project origin (Spain/EU) and applicable regulations clarified
+  - User deployment guidance for 15+ jurisdictions
+  - Clear distinction between developer obligations and user responsibilities
+
+### Changed
+- **Regulatory Section**: Reframed from developer action items to user deployment guidance
+- **US/BIS Guidance**: Reframed as user deployment consideration (not developer obligation)
+- **All "Action:" items**: Changed to "User Action:" to clarify responsibility lies with deployers
+- **Restricted Zones**: Broadened language from region-specific to "highly regulated zones"
+
+### Fixed
+- **gosec G115**: Integer overflow in `int` to `uint32` conversions (`pkg/crypto/kdf.go`)
+- **gosec G104**: Unhandled errors on hash `Write()` calls (`pkg/crypto/kdf.go`)
+- **shellcheck SC2086/SC2015**: Glob patterns and `A && B || C` logic in `build.sh`
+- **revive**: Missing comments on exported constants and methods
+- **revive**: `context.Context` parameter ordering in test helpers
+- **revive**: Redundant `if-return` patterns
+- **remark-lint**: Bare URLs converted to proper markdown links
+- **remark-lint**: Undefined reference links escaped in mathematical notation
+- **gofmt -s**: Applied simplified formatting to all source files
+
+### Documentation
+- Updated README.md with v0.0.8 status and FIPS features
+- Performance benchmarks table for multiple hardware platforms
+- Condensed compliance section with clearer liability terms
+
 ## [0.0.7][] - 2026-01-22
 
 ### Added
@@ -211,7 +242,8 @@ Benchmark results (Apple M-series):
 - Basic tunnel API
 - Unit tests for crypto primitives
 
-[Unreleased]: https://github.com/pzverkov/quantum-go/compare/v0.0.7...HEAD
+[Unreleased]: https://github.com/pzverkov/quantum-go/compare/v0.0.8...HEAD
+[0.0.8]: https://github.com/pzverkov/quantum-go/compare/v0.0.7...v0.0.8
 [0.0.7]: https://github.com/pzverkov/quantum-go/compare/v0.0.6...v0.0.7
 [0.0.6]: https://github.com/pzverkov/quantum-go/compare/v0.0.5...v0.0.6
 [0.0.5]: https://github.com/pzverkov/quantum-go/compare/v0.0.4...v0.0.5
