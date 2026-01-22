@@ -113,15 +113,6 @@ Required for FIPS 140-3 validation.
 - [x] Document that open source on GitHub is generally exempt
 - [x] Clarify restrictions in highly regulated zones (must not bypass telecom regulations)
 
-### 3. Code Quality & Linting
-**Priority:** Medium | **Effort:** Low
-
-- [x] Fix all gosec security warnings (integer overflow, unhandled errors)
-- [x] Fix shellcheck warnings in build scripts
-- [x] Fix revive linting (exported comments, context parameter order)
-- [x] Fix remark-lint markdown warnings (URLs, references)
-- [x] Apply gofmt -s to all source files
-
 ---
 
 ## v0.0.9 - Enterprise Features
